@@ -1,0 +1,40 @@
+@import url('https://fonts.googleapis.com/css2?family=Gloria+Hallelujah&family=Josefin+Sans&family=Orbitron&family=Poppins:wght@200;400;700&display=swap');
+
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    outline: 0;
+    border: 0;
+    box-sizing: border-box;
+}
+
+::-webkit-scrollbar {
+    width: 9px;
+    background-color: rgb(0, 0, 0);
+}
+
+::-webkit-scrollbar-track-piece {
+    background-color: rgb(180, 75, 128);
+    border-radius: .25em;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: pink;
+    border-radius: .25em;
+}
+
+::-webkit-scrollbar-corner {
+    background-color: rgb(0, 0, 0);
+}
+
+body {
+    font-family: "Poppins", serif;
+}
+
+#root {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}

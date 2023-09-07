@@ -1,0 +1,12 @@
+.navbar {
+    width: 100%;
+    background-color: pink;
+}
+
+.navbarList {
+    display: flex;
+    justify-content: center;
+    gap: 2px;
+    width: 100%;
+    list-style: none;
+}

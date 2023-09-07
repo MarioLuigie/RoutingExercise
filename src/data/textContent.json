@@ -1,0 +1,117 @@
+{
+    "header" : {
+        "label" : "Routing"
+    },
+    "navbar" : {
+        "home" : {
+            "label" : "HOME",
+            "path" : "/"
+        },
+        "about" : {
+            "label" : "ABOUT",
+            "path" : "/about"
+        },
+        "products" : {
+            "label" : "PRODUCTS",
+            "path" : "/products"
+        }, 
+        "contact" : {
+            "label" : "CONTACT",
+            "path" : "/contact"
+        }
+    },
+    "main" : {
+        "homePage" : {
+
+        },
+        "aboutPage" : {
+
+        },
+        "productPage" : {
+            "productList" : [
+                {
+                    "id" : "01",
+                    "type" : "shoes",
+                    "brand" : "Aria",
+                    "name" : "AriaGT1",
+                    "quantity" : 7,
+                    "size" : "38",
+                    "price" : 499
+                },
+                {
+                    "id" : "02",
+                    "type" : "shoes",
+                    "brand" : "Baria",
+                    "name" : "Baria2",
+                    "quantity" : 2,
+                    "size" : "37",
+                    "price" : 299
+                },
+                {
+                    "id" : "03",
+                    "type" : "shoes",
+                    "brand" : "Aria",
+                    "name" : "AriaGT10",
+                    "quantity" : 4,
+                    "size" : "37",
+                    "price" : 399
+                },
+                {
+                    "id" : "04",
+                    "type" : "handbags",
+                    "brand" : "Aria",
+                    "name" : "AriaBag22",
+                    "quantity" : 5,
+                    "size" : "UNI",
+                    "price" : 599
+                },
+                {
+                    "id" : "05",
+                    "type" : "handbags",
+                    "brand" : "Aria",
+                    "name" : "AriaBag23",
+                    "quantity" : 1,
+                    "size" : "UNI",
+                    "price" : 199
+                },
+                {
+                    "id" : "06",
+                    "type" : "handbags",
+                    "brand" : "Baria",
+                    "name" : "Baria100",
+                    "quantity" : 5,
+                    "size" : "S",
+                    "price" : 349
+                },
+                {
+                    "id" : "07",
+                    "type" : "shoes",
+                    "brand" : "Caria",
+                    "name" : "Caria100",
+                    "quantity" : 1,
+                    "size" : "35",
+                    "price" : 1299
+                },
+                {
+                    "id" : "08",
+                    "type" : "",
+                    "brand" : "Daria",
+                    "name" : "Daria00",
+                    "quantity" : 4,
+                    "size" : "39",
+                    "price" : 199
+                }
+            ]
+        },
+        "contactPage" : {
+
+        },
+        "notFoundPage" : {
+            "label" : "Not Found! 404 status",
+            "buttonLabel" : "redirect"
+        }
+    },
+    "footer" : {
+        "sign" : "ARWcode 2023"
+    }
+}

@@ -41,7 +41,7 @@ export default function Product ({
                     <p>Type: <span className="product__info--xl">{type}</span></p>
                     <p>Quantity: {quantity}</p>
                     <p>Size: {size}</p>
-                    <p>Price: <span className="product__info--xxl">{price},-</span></p>
+                    <p className="product__price">Price: <span className="product__info--xxl">{price},-</span></p>
                 </div>
             </div>
         </li>

@@ -44,6 +44,13 @@
         font-size: 18px;
     }
 
+    &__price {
+        display: flex;
+        align-items: center;
+        gap: 6px;
+        justify-content: flex-end;
+    }
+
     &__body {
         display: flex;
         flex-direction: column;

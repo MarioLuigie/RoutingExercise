@@ -8,7 +8,7 @@ export default function ProductsPanel () {
     const [isFilterVisable, setIsFilterVisable] = useState(false)
 
     const handleOpenFilter = () => {
-        console.log(isFilterVisable);
+        console.log(isFilterVisable)
         setIsFilterVisable(!isFilterVisable)
     }
 
@@ -19,7 +19,7 @@ export default function ProductsPanel () {
                     className="productsPanel__button"
                     onClick={handleOpenFilter}
                 >
-                    <span>FILTER</span>
+                    FILTER
                     <FontAwesomeIcon icon={faChevronDown} />
                 </button>
             </div>
@@ -31,7 +31,6 @@ export default function ProductsPanel () {
                     }`
                 }
             >
-
             </div>
         </div>
     )

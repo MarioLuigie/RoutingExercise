@@ -1,4 +1,13 @@
+@import "../../App.scss";
+
+@mixin fontGradient ($firstColor, $secondColor){
+    background: linear-gradient(to right, $firstColor, $secondColor);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
 .header {
+    margin-top: $panelHeight;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -8,6 +17,12 @@
 
     &__label {
         font-size: 90px;
-        color: rgb(23, 142, 158);
+        @include fontGradient(rgb(160, 32, 111), rgb(23, 142, 158) )
+    }
+
+    &__icon {
+        font-size: 70px;
+        color: rgb(75, 75, 75);
+        @include fontGradient(red, blue )
     }
 }

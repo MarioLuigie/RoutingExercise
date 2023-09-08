@@ -2,8 +2,20 @@ import { useState } from "react"
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faChevronDown } from '@fortawesome/free-solid-svg-icons'
 import "../styles/components/ProductsPanel.scss"
+import MySelect from "./MySelect"
 
 export default function ProductsPanel () {
+
+    const optionsForCategory = [
+        {value : "shoes", label : "shoes"},
+        {value : "handbags", label : "handbags"},
+    ]
+
+    const optionsForSize = [
+        {value : "36", label : "36"},
+        {value : "37", label : "37"},
+        {value : "38", label : "38"},
+    ]
 
     const [isFilterVisable, setIsFilterVisable] = useState(false)
 
@@ -31,6 +43,16 @@ export default function ProductsPanel () {
                     }`
                 }
             >
+                <MySelect 
+                    label="Category"
+                    options={optionsForCategory}
+                    placeholder="Select category"
+                />
+                <MySelect 
+                    label="Size"
+                    options={optionsForSize}
+                    placeholder="Select size"
+                />
             </div>
         </div>
     )

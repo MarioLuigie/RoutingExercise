@@ -1,6 +1,6 @@
 {
     "header" : {
-        "label" : "Routing"
+        "label" : "Parenting"
     },
     "navbar" : {
         "home" : {
@@ -112,6 +112,6 @@
         }
     },
     "footer" : {
-        "sign" : "ARWcode 2023"
+        "sign" : "ARWcode 2023 All right reserved"
     }
 }

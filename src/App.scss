@@ -1,11 +1,16 @@
 //VARIABLES
 
+//Calc
+$panelHeight: 70px;
+$maxWidthForApp: 1280px;
+
 //Colors
 $accentColor: pink;
 
 .app {
+    position: relative;
     width: 100%;
-    max-width: 1280px;
+    max-width: $maxWidthForApp;
     min-width: 360px;
     background-color: red;
 }

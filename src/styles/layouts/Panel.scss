@@ -1,0 +1,48 @@
+@import "../../App.scss";
+
+.panel {
+    z-index: 2;
+    position: fixed;
+    padding: 10px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    top: 0;
+    width: 100%;
+    max-width: $maxWidthForApp;
+    height: $panelHeight;
+    background-color: pink;
+    border-bottom: 1px solid rgb(255, 146, 164);
+}
+
+.loginWrapper {
+    padding: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: pink;
+    cursor: pointer;
+}
+
+.login {
+    display: flex;
+    align-items: center;
+    gap: 7px;
+    padding-right: 8px;
+    font-size: 20px;
+    color: rgb(75, 75, 75);
+    background-color: pink;
+    cursor: pointer;
+
+    &:hover {
+        color: rgb(18, 149, 182);
+    }
+}
+
+.heartIcon {
+    font-size: 20px;
+    color: rgb(233, 25, 43);
+}
+
+
+

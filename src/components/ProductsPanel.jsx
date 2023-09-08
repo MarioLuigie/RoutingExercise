@@ -1,8 +1,9 @@
 import { useState } from "react"
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faChevronDown } from '@fortawesome/free-solid-svg-icons'
-import "../styles/components/ProductsPanel.scss"
+import { faChevronUp } from '@fortawesome/free-solid-svg-icons'
 import MySelect from "./MySelect"
+import "../styles/components/ProductsPanel.scss"
 
 export default function ProductsPanel () {
 
@@ -32,7 +33,10 @@ export default function ProductsPanel () {
                     onClick={handleOpenFilter}
                 >
                     FILTER
-                    <FontAwesomeIcon icon={faChevronDown} />
+                    {!isFilterVisable 
+                        ? <FontAwesomeIcon icon={faChevronDown} /> 
+                        : <FontAwesomeIcon icon={faChevronUp} />
+                    }
                 </button>
             </div>
             <div 

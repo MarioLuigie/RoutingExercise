@@ -1,4 +1,3 @@
-import { useState } from "react"
 import Select from "react-select"
 import PropTypes from "prop-types"
 import "../styles/components/MySelect.scss"
@@ -6,14 +5,17 @@ import "../styles/components/MySelect.scss"
 export default function MySelect ({
     label,
     options,
-    placeholder
+    placeholder,
+    selectedOption,
+    setSelectedOption
 }) {
 
-    const [selectedOption, setSelectedOption] = useState(null);
-
     const handleChange = (selectedOption) => {
+        console.log(selectedOption.value);
         setSelectedOption(selectedOption)
     }
+
+    console.log(selectedOption);
 
     return (
         <div className="mySelectWrapper">
@@ -35,4 +37,6 @@ MySelect.propTypes = {
     label : PropTypes.string.isRequired,
     options : PropTypes.array.isRequired,
     placeholder : PropTypes.string.isRequired,
+    selectedOption : PropTypes.object,
+    setSelectedOption : PropTypes.func,
 }

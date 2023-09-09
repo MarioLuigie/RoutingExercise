@@ -1,3 +1,9 @@
+.selects {
+    width: 100%;
+    display: flex;
+    gap: 20px;
+}
+
 .mySelectWrapper {
     display: flex;
     flex-direction: column;
@@ -18,10 +24,11 @@
 
 .mySelect {
     width: 100%;
+    font-size: 15px;
 }
 
 .mySelectLabel {
     padding: 10px;
-    font-size: 20px;
+    font-size: 18px;
     color: rgb(82, 82, 82);
 }

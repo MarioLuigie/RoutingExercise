@@ -4,6 +4,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faBagShopping } from '@fortawesome/free-solid-svg-icons'
 import { faShoePrints } from '@fortawesome/free-solid-svg-icons'
 import { faBan } from '@fortawesome/free-solid-svg-icons'
+import { faTableColumns } from '@fortawesome/free-solid-svg-icons'
 
 import "../styles/components/Product.scss"
 
@@ -21,6 +22,9 @@ export default function Product ({
                 break;
             case "shoes":
                 setImage(<FontAwesomeIcon icon={faShoePrints} />)
+                break;
+            case "pants":
+                setImage(<FontAwesomeIcon icon={faTableColumns} />)
                 break;
             default:
                 setImage(<FontAwesomeIcon icon={faBan} />)

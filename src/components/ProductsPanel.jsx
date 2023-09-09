@@ -1,4 +1,5 @@
-import { useState } from "react"
+import { useState, useContext } from "react"
+import { Context } from "../Store/Context"
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faChevronDown } from '@fortawesome/free-solid-svg-icons'
 import { faChevronUp } from '@fortawesome/free-solid-svg-icons'
@@ -8,22 +9,38 @@ import "../styles/components/ProductsPanel.scss"
 export default function ProductsPanel () {
 
     const optionsForCategory = [
-        {value : "shoes", label : "shoes"},
-        {value : "handbags", label : "handbags"},
-        {value : "pants", label : "pants"},
+        {value : "all", label : "-All categories-"},
+        {value : "shoes", label : "Shoes"},
+        {value : "handbags", label : "Handbags"},
+        {value : "pants", label : "Pants"},
     ]
 
     const optionsForBrand = [
+        {value : "all", label : "-All brands-"},
         {value : "Caria", label : "Caria"},
         {value : "Aria", label : "Aria"},
         {value : "Baria", label : "Baria"},
+        {value : "Levis", label : "Levis"},
     ]
 
+    function createOptions (options) {
+        const sortedList = options.map(option => option).sort((a, b) => {
+            const A = a.label
+            const B = b.label
+            return A.localeCompare(B)
+        })
+
+        return (
+            sortedList
+        )
+    }
+
     function createOptionsForSize () {
-        console.log(category);
+        // console.log(category);
         return (
             category?.value !== "shoes"
                 ? [
+                    {value : "all", label : "-All sizes-"},
                     {value : "M", label : "M"},
                     {value : "XS", label : "XS"},
                     {value : "S", label : "S"},
@@ -31,6 +48,7 @@ export default function ProductsPanel () {
                     {value : "XL", label : "XL"},
                 ]
                 : [
+                    {value : "all", label : "-all sizes-"},
                     {value : "36", label : "36"},
                     {value : "37", label : "37"},
                     {value : "38", label : "38"},
@@ -41,10 +59,9 @@ export default function ProductsPanel () {
         )
     }
 
+    const { category, setCategory, brand, setBrand, size, setSize } = useContext(Context)
+
     const [isFilterVisable, setIsFilterVisable] = useState(false)
-    const [category, setCategory] = useState(null);
-    const [brand, setBrand] = useState(null);
-    const [size, setSize] = useState(null);
 
     const handleOpenFilter = () => {
         console.log(isFilterVisable)
@@ -76,14 +93,14 @@ export default function ProductsPanel () {
                 <div className="selects">
                     <MySelect 
                         label="Category"
-                        options={optionsForCategory}
+                        options={createOptions(optionsForCategory)}
                         placeholder="Select category"
                         selectedOption={category}
                         setSelectedOption={setCategory}
                     />
                     <MySelect 
                         label="Brands"
-                        options={optionsForBrand}
+                        options={createOptions(optionsForBrand)}
                         placeholder="Select brand"
                         selectedOption={brand}
                         setSelectedOption={setBrand}

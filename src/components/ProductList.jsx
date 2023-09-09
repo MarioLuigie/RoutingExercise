@@ -1,3 +1,5 @@
+import { useContext } from "react"
+import { Context } from "../Store/Context"
 import textContent from "../data/textContent.json"
 import Product from "./Product"
 
@@ -5,19 +7,35 @@ import "../styles/components/ProductList.scss"
 
 export default function ProductList () {
 
+    const { category, brand, size } = useContext(Context)
+
     const { main : { productPage : { productList } }} = textContent
 
-    const list = productList.map((product, i) => {
+    const filterProducts = (product) => {
+        const categoryFilter = !category 
+            || category.value === "all" 
+            || product.type === category.value;
+        const brandFilter = !brand 
+            || brand.value === "all" 
+            || product.brand === brand.value;
+        const sizeFilter = !size 
+            || size.value === "all" 
+            || product.size === size.value;
+        return categoryFilter 
+            && brandFilter 
+            && sizeFilter;
+    };
 
-        return (
+    const list = productList
+        .filter((product) => filterProducts(product))
+        .map((product, i) => 
             <Product 
                 key={i}
                 product={product}
             />
         )
-    })
 
-    console.log(list);
+    // console.log(list);
 
     return (
         <ul className="productList">

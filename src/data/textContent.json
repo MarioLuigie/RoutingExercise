@@ -100,6 +100,33 @@
                     "quantity" : 4,
                     "size" : "39",
                     "price" : 199
+                },
+                {
+                    "id" : "09",
+                    "type" : "pants",
+                    "brand" : "Levis",
+                    "name" : "Levi100",
+                    "quantity" : 2,
+                    "size" : "L",
+                    "price" : 1299
+                },
+                {
+                    "id" : "10",
+                    "type" : "pants",
+                    "brand" : "Levis",
+                    "name" : "Levi200",
+                    "quantity" : 4,
+                    "size" : "XL",
+                    "price" : 999
+                },
+                {
+                    "id" : "11",
+                    "type" : "handbags",
+                    "brand" : "Levis",
+                    "name" : "Levi900",
+                    "quantity" : 2,
+                    "size" : "L",
+                    "price" : 455
                 }
             ]
         },

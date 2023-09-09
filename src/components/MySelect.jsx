@@ -15,7 +15,7 @@ export default function MySelect ({
         setSelectedOption(selectedOption)
     }
 
-    console.log(selectedOption);
+    // console.log(selectedOption);
 
     return (
         <div className="mySelectWrapper">

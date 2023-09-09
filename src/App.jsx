@@ -1,3 +1,4 @@
+import Provider from "./Store/Context"
 import { BrowserRouter as Router } from "react-router-dom"
 import Panel from "./layouts/Panel"
 import Header from "./layouts/Header"
@@ -10,15 +11,18 @@ import "./App.scss"
 export default function App() {
 
   return (
-    <div className="app">
-      <Router>
-        <Panel />
-        <Header />
-        <Navbar />
-        <Main />
-        <Footer />
-      </Router>
-    </div>
+    <Provider>
+      <div className="app">
+        <Router>
+          <Panel />
+          <Header />
+          <Navbar />
+          <Main />
+          <Footer />
+        </Router>
+      </div>
+    </Provider>
+
   )
 }
 

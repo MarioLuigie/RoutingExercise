@@ -1,6 +1,6 @@
 import { useContext } from "react"
 import { Context } from "../Store/Context"
-import textContent from "../data/textContent.json"
+import products from "../data/products.json"
 import Product from "./Product"
 
 import "../styles/components/ProductList.scss"
@@ -9,7 +9,7 @@ export default function ProductList () {
 
     const { category, brand, size } = useContext(Context)
 
-    const { main : { productPage : { productList } }} = textContent
+    const { productList } = products
 
     const filterProducts = (product) => {
         const categoryFilter = !category 

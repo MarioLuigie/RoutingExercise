@@ -4,8 +4,17 @@
 $panelHeight: 70px;
 $maxWidthForApp: 1280px;
 
+$mobileRange: 770px;
+$panelHeight : 70px;
+$headerHeight : 370px;
+$maxWidthForApp : 1280px;
+$RouteHeight : 500px;
+
 //Colors
 $accentColor: pink;
+$secAccentColor:  rgb(23, 142, 158);
+$mainColor :  rgb(233, 233, 233);
+$activeNavLinkColor :  rgb(49, 49, 49);
 
 .app {
     position: relative;
@@ -14,3 +23,4 @@ $accentColor: pink;
     min-width: 360px;
     background-color: red;
 }
+

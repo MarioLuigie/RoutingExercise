@@ -1,0 +1,89 @@
+@import "../App.scss";
+
+//Wrapper
+$wrapperWidth: 40px;
+$wrapperPadding: 5px;
+$borderRadius: 0;
+$wrapperColor: $mainColor;
+
+//Stripes
+$stripeHeight: 4px;
+$stripeColor: rgb(50, 50, 50);
+$stripeColorToChange: $stripeColor;
+
+.menuBtnWrapper {
+  position: absolute;
+  left: 16px;
+  background-color: transparent;
+  width: $wrapperWidth;
+  aspect-ratio: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  border-radius: $borderRadius;
+  cursor: pointer;
+
+  // @media screen and (min-width: 600px) {
+  //   display: none;
+  // }
+
+  // &:hover {
+
+  //   :nth-child(1) {
+  //     transform: rotate(45deg) ;
+  //     position: absolute;
+  //     left: 5%;
+  //     background-color: $stripeColorToChange;
+  //   }
+
+  //   :nth-child(2) {
+  //     transform: scaleX(0);
+  //     opacity: 0;
+  //     background-color: $stripeColorToChange;
+  //   }
+
+  //   :nth-child(3) {
+  //     transform: rotate(-45deg);
+  //     position: absolute;
+  //     left: 5%;
+  //     background-color: $stripeColorToChange;
+  //   }
+  // }
+}
+
+.child {
+  width: calc(#{$wrapperWidth} - #{$wrapperPadding});
+  height: $stripeHeight;
+  background-color: $stripeColor;
+  border-radius: $stripeHeight;
+  transform: rotate(0deg);
+  opacity: 1;
+  transition: transform 0.3s, opacity 0.3s;
+}
+
+.isMenuBtnClicked {
+  :nth-child(1) {
+    transform: rotate(45deg) ;
+    position: absolute;
+    left: 5%;
+    background-color: $stripeColorToChange;
+  }
+
+  :nth-child(2) {
+    transform: scaleX(0);
+    opacity: 0;
+    background-color: $stripeColorToChange;
+  }
+
+  :nth-child(3) {
+    transform: rotate(-45deg);
+    position: absolute;
+    left: 5%;
+    background-color: $stripeColorToChange;
+  }
+}
+
+
+
+

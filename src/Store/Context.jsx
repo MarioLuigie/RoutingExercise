@@ -1,11 +1,15 @@
 import { useState } from "react"
 import { createContext } from "react";
 import PropTypes from "prop-types"
+import { useMediaQuery } from "react-responsive"
 
 export const Context = createContext();
 
 export default function Provider ({ children }) {
 
+    const isMobile = useMediaQuery({ maxWidth : 770 })
+
+    const [isMenuBtnClicked, setIsMenuBtnClicked] = useState(false)
     const [category, setCategory] = useState(null)
     const [brand, setBrand] = useState(null)
     const [size, setSize] = useState(null)
@@ -17,6 +21,9 @@ export default function Provider ({ children }) {
         setBrand,
         size,
         setSize,
+        isMenuBtnClicked,
+        setIsMenuBtnClicked,
+        isMobile,
     }
     
     return (

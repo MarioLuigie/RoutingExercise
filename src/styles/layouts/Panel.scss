@@ -7,6 +7,7 @@
     display: flex;
     align-items: center;
     justify-content: flex-end;
+    gap: 10px;
     top: 0;
     width: 100%;
     max-width: $maxWidthForApp;
@@ -16,12 +17,27 @@
 }
 
 .loginWrapper {
-    padding: 5px;
     display: flex;
     justify-content: center;
     align-items: center;
     background-color: pink;
     cursor: pointer;
+}
+
+.shoppingIcon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 7px;
+    font-size: 22px;
+    background-color: transparent;
+    color: rgb(95, 86, 86);
+    padding-bottom: 12px;
+    cursor: pointer;
+
+    &:hover {
+        color: rgb(18, 158, 151);
+    }
 }
 
 .login {

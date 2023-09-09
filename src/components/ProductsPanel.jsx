@@ -46,6 +46,7 @@ export default function ProductsPanel () {
                     {value : "S", label : "S"},
                     {value : "L", label : "L"},
                     {value : "XL", label : "XL"},
+                    {value : "UNI", label : "UNI"},
                 ]
                 : [
                     {value : "all", label : "-all sizes-"},

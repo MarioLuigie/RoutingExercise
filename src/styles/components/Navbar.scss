@@ -1,6 +1,10 @@
 .navbar {
     width: 100%;
     background-color: pink;
+
+    &--hidden {
+        display: none;
+    }
 }
 
 .navbarList {

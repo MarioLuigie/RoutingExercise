@@ -1,3 +1,5 @@
+@import "../../App.scss";
+
 .products {
     width: 100%;
     min-height: 500px;
@@ -5,12 +7,12 @@
     flex-direction: column;
     justify-content: flex-start;
     align-items: center;
-    background-color: rgb(240, 235, 230);
+    background-color: $mainColor;
     padding-bottom: 20px;
 
     &__label {
         padding: 50px 0 20px;
         font-size: 28px;
-        color: rgb(109, 109, 109);
+        color: $secAccentColor;
     }
 }

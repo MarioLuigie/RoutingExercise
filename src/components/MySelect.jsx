@@ -16,7 +16,6 @@ export default function MySelect ({
     }
 
     // console.log(selectedOption);
-
     return (
         <div className="mySelectWrapper">
             <label htmlFor="select" className="mySelectLabel">{label}</label>

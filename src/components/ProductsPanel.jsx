@@ -51,12 +51,14 @@ export default function ProductsPanel () {
                 ]
                 : [
                     {value : "all", label : "-all sizes-"},
+                    {value : "35", label : "35"},
                     {value : "36", label : "36"},
                     {value : "37", label : "37"},
                     {value : "38", label : "38"},
                     {value : "39", label : "39"},
                     {value : "40", label : "40"},
                     {value : "41", label : "41"},
+                    {value : "42", label : "42"},
                 ]
         )
     }
@@ -72,6 +74,7 @@ export default function ProductsPanel () {
         setAmount 
     } = useContext(Context)
 
+    const initialAmount = "all"
     const [isFilterVisable, setIsFilterVisable] = useState(false)
 
     const handleOpenFilter = () => {
@@ -82,7 +85,8 @@ export default function ProductsPanel () {
     const handleChangeRadio = (evt) => {
         console.log(amount)
         console.log(typeof amount)
-        setAmount(Number(evt.target.value))
+        const newAmount = evt.target.value === "all" ? initialAmount : Number(evt.target.value)
+        setAmount(newAmount)
     };
 
     return (
@@ -130,15 +134,6 @@ export default function ProductsPanel () {
                         setSelectedOption={setSize}
                     />
                 </div>
-                <div>
-                    <button className="moreSelectsButton"> 
-                        {!isFilterVisable 
-                            ? <FontAwesomeIcon icon={faChevronDown} /> 
-                            : <FontAwesomeIcon icon={faChevronUp} />
-                        }
-                        less
-                    </button>
-                </div>
                 <div className="selectAmount">
                     <div className="selectsRadio__label">
                         Amount
@@ -165,7 +160,23 @@ export default function ProductsPanel () {
                             label="over 1000"
                             value={1000}
                         />
+                        <RadioButton 
+                            changed={handleChangeRadio}
+                            id="all"
+                            isSelected={amount === initialAmount}
+                            label="All"
+                            value="all"
+                        />
                     </div>
+                </div>
+                <div>
+                    <button className="moreSelectsButton"> 
+                        less
+                        {!isFilterVisable 
+                            ? <FontAwesomeIcon icon={faChevronDown} /> 
+                            : <FontAwesomeIcon icon={faChevronUp} />
+                        }
+                    </button>
                 </div>
             </div>
         </div>

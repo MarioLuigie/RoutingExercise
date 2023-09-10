@@ -1,11 +1,10 @@
-import PropTypes from "prop-types"
 import { useState, useEffect } from "react"
+import PropTypes from "prop-types"
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faBagShopping } from '@fortawesome/free-solid-svg-icons'
 import { faShoePrints } from '@fortawesome/free-solid-svg-icons'
 import { faBan } from '@fortawesome/free-solid-svg-icons'
 import { faTableColumns } from '@fortawesome/free-solid-svg-icons'
-
 import "../styles/components/Product.scss"
 
 export default function Product ({

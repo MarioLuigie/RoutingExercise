@@ -28,5 +28,8 @@ RadioButton.propTypes = {
     id : PropTypes.string.isRequired,
     isSelected : PropTypes.bool.isRequired,
     label : PropTypes.string.isRequired,
-    value : PropTypes.number.isRequired,
+    value : PropTypes.oneOfType([
+        PropTypes.number.isRequired,
+        PropTypes.string.isRequired,
+    ]),
 }

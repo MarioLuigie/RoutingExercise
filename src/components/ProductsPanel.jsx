@@ -4,6 +4,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faChevronDown } from '@fortawesome/free-solid-svg-icons'
 import { faChevronUp } from '@fortawesome/free-solid-svg-icons'
 import MySelect from "./MySelect"
+import RadioButton from "../tools/RadioButton"
 import "../styles/components/ProductsPanel.scss"
 
 export default function ProductsPanel () {
@@ -60,7 +61,16 @@ export default function ProductsPanel () {
         )
     }
 
-    const { category, setCategory, brand, setBrand, size, setSize } = useContext(Context)
+    const { 
+        category, 
+        setCategory, 
+        brand, 
+        setBrand, 
+        size, 
+        setSize, 
+        amount, 
+        setAmount 
+    } = useContext(Context)
 
     const [isFilterVisable, setIsFilterVisable] = useState(false)
 
@@ -68,6 +78,12 @@ export default function ProductsPanel () {
         console.log(isFilterVisable)
         setIsFilterVisable(!isFilterVisable)
     }
+
+    const handleChangeRadio = (evt) => {
+        console.log(amount)
+        console.log(typeof amount)
+        setAmount(Number(evt.target.value))
+    };
 
     return (
         <div className="productsPanel">
@@ -113,6 +129,43 @@ export default function ProductsPanel () {
                         selectedOption={size}
                         setSelectedOption={setSize}
                     />
+                </div>
+                <div>
+                    <button className="moreSelectsButton"> 
+                        {!isFilterVisable 
+                            ? <FontAwesomeIcon icon={faChevronDown} /> 
+                            : <FontAwesomeIcon icon={faChevronUp} />
+                        }
+                        less
+                    </button>
+                </div>
+                <div className="selectAmount">
+                    <div className="selectsRadio__label">
+                        Amount
+                    </div>
+                    <div className="selectsRadio">
+                        <RadioButton 
+                            changed={handleChangeRadio}
+                            id="1"
+                            isSelected={amount === 0}
+                            label="under 100"
+                            value={0}
+                        />
+                        <RadioButton 
+                            changed={handleChangeRadio}
+                            id="2"
+                            isSelected={amount === 100}
+                            label="100 - 1000"
+                            value={100}
+                        />
+                        <RadioButton 
+                            changed={handleChangeRadio}
+                            id="3"
+                            isSelected={amount === 1000}
+                            label="over 1000"
+                            value={1000}
+                        />
+                    </div>
                 </div>
             </div>
         </div>

@@ -13,6 +13,7 @@ export default function Provider ({ children }) {
     const [category, setCategory] = useState(null)
     const [brand, setBrand] = useState(null)
     const [size, setSize] = useState(null)
+    const [amount, setAmount] = useState(0);
 
     const providerValues = {
         category,
@@ -24,6 +25,8 @@ export default function Provider ({ children }) {
         isMenuBtnClicked,
         setIsMenuBtnClicked,
         isMobile,
+        amount,
+        setAmount,
     }
     
     return (

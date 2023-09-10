@@ -25,7 +25,7 @@
             "name" : "AriaGT10",
             "quantity" : 4,
             "size" : "37",
-            "price" : 399
+            "price" : 99
         },
         {
             "id" : "04",
@@ -107,6 +107,24 @@
             "quantity" : 12,
             "size" : "42",
             "price" : 299
+        },
+        {
+            "id" : "13",
+            "type" : "shoes",
+            "brand" : "Levis",
+            "name" : "Levi245",
+            "quantity" : 4,
+            "size" : "42",
+            "price" : 1499
+        },
+        {
+            "id" : "14",
+            "type" : "shoes",
+            "brand" : "Levis",
+            "name" : "Levi245yu",
+            "quantity" : 5,
+            "size" : "40",
+            "price" : 89
         }
     ]
 }

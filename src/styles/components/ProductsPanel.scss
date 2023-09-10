@@ -35,8 +35,47 @@
 
         &--visible {
             padding: 20px;
-            height: 180px;
+            height: 320px;
             overflow: visible;
         }
     }
+}
+
+.selects {
+    width: 100%;
+    display: flex;
+    gap: 20px;
+}
+
+.selectsRadio {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    background-color: rgb(243, 243, 243);
+    padding: 0 10px;
+
+    &__label {
+        width: 100%;
+        text-align: left;
+        font-size: 18px;
+        color: rgb(82, 82, 82);
+        background-color: rgb(216, 216, 216);
+        padding: 9px;
+    }
+}
+
+.moreSelectsButton {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 3px;
+    cursor: pointer;
+    padding: 10px 0;
+    width: 100px;
+    font-size: 18px;
+    color: rgb(68, 68, 68);
+    background-color: transparent;
+
 }

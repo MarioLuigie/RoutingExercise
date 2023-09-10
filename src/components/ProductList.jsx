@@ -7,25 +7,44 @@ import "../styles/components/ProductList.scss"
 
 export default function ProductList () {
 
-    const { category, brand, size } = useContext(Context)
+    const all = "all"
+    const { category, brand, size, amount } = useContext(Context)
 
     const { productList } = products
 
     const filterProducts = (product) => {
         const categoryFilter = !category 
-            || category.value === "all" 
-            || product.type === category.value;
+            || category.value === all
+            || product.type === category.value
         const brandFilter = !brand 
-            || brand.value === "all" 
-            || product.brand === brand.value;
+            || brand.value === all
+            || product.brand === brand.value
         const sizeFilter = !size 
-            || size.value === "all" 
-            || product.size === size.value;
+            || size.value === all 
+            || product.size === size.value
+        const price = Number(product.price);
+        let amountFilter = true;
+        // I am checking is price in users range
+        switch (amount) {
+            case 0:
+            amountFilter = price >= 0 && price < 100;
+            break
+            case 100:
+            amountFilter = price >= 100 && price <= 1000;
+            break
+            case 1000:
+            amountFilter = price > 1000;
+            break
+            default:
+            break
+        }
         return categoryFilter 
             && brandFilter 
-            && sizeFilter;
-    };
+            && sizeFilter
+            && amountFilter
+    }
 
+    // console.log(amount);
     const list = productList
         .filter((product) => filterProducts(product))
         .map((product, i) => 
@@ -36,7 +55,6 @@ export default function ProductList () {
         )
 
     // console.log(list);
-
     return (
         <ul className="productList">
             {list}

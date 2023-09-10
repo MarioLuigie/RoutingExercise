@@ -134,7 +134,7 @@ export default function ProductsPanel () {
                         setSelectedOption={setSize}
                     />
                 </div>
-                <div className="selectAmount">
+                <div className="selectsAmount">
                     <div className="selectsRadio__label">
                         Amount
                     </div>
@@ -169,9 +169,9 @@ export default function ProductsPanel () {
                         />
                     </div>
                 </div>
-                <div>
+                <div className="moreSelects">
                     <button className="moreSelectsButton"> 
-                        less
+                        LESS
                         {!isFilterVisable 
                             ? <FontAwesomeIcon icon={faChevronDown} /> 
                             : <FontAwesomeIcon icon={faChevronUp} />

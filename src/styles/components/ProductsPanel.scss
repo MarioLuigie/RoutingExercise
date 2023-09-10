@@ -18,7 +18,8 @@
         color: rgb(61, 61, 61);
         cursor: pointer;
         display: flex;
-        gap: 5px;
+        align-items: center;
+        gap: 7px;
     }
 
     &__body {
@@ -65,6 +66,16 @@
     }
 }
 
+.selectsAmount {
+    // background-color: red;
+    width: 100%;
+    padding-top: 20px;
+}
+
+.moreSelects {
+    width: 100%;
+}
+
 .moreSelectsButton {
     display: flex;
     justify-content: center;
@@ -73,7 +84,7 @@
     cursor: pointer;
     padding: 30px 0 10px;
     width: 100px;
-    font-size: 24px;
+    font-size: 20px;
     color: rgb(68, 68, 68);
     background-color: transparent;
 

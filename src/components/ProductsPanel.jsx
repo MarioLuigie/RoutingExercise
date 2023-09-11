@@ -24,7 +24,7 @@ export default function ProductsPanel () {
         {value : "Levis", label : "Levis"},
     ]
 
-    function createOptions (options) {
+    function createSortedOptions (options) {
         const sortedList = options.map(option => option).sort((a, b) => {
             const A = a.label
             const B = b.label
@@ -50,7 +50,7 @@ export default function ProductsPanel () {
                     {value : "UNI", label : "UNI"},
                 ]
                 : [
-                    {value : "all", label : "-all sizes-"},
+                    {value : "all", label : "-All sizes-"},
                     {value : "35", label : "35"},
                     {value : "36", label : "36"},
                     {value : "37", label : "37"},
@@ -85,7 +85,9 @@ export default function ProductsPanel () {
     const handleChangeRadio = (evt) => {
         console.log(amount)
         console.log(typeof amount)
-        const newAmount = evt.target.value === "all" ? initialAmount : Number(evt.target.value)
+        const newAmount = evt.target.value === initialAmount 
+            ? initialAmount 
+            : Number(evt.target.value)
         setAmount(newAmount)
     };
 
@@ -105,23 +107,23 @@ export default function ProductsPanel () {
             </div>
             <div 
                 className={
-                    `${isFilterVisable 
-                        ? "productsPanel__body productsPanel__body--visible" 
-                        : "productsPanel__body"
+                    `productsPanel__body ${isFilterVisable 
+                        ? " productsPanel__body--visible" 
+                        : ""
                     }`
                 }
             >
                 <div className="selects">
                     <MySelect 
                         label="Category"
-                        options={createOptions(optionsForCategory)}
+                        options={createSortedOptions(optionsForCategory)}
                         placeholder="Select category"
                         selectedOption={category}
                         setSelectedOption={setCategory}
                     />
                     <MySelect 
                         label="Brands"
-                        options={createOptions(optionsForBrand)}
+                        options={createSortedOptions(optionsForBrand)}
                         placeholder="Select brand"
                         selectedOption={brand}
                         setSelectedOption={setBrand}
@@ -162,10 +164,10 @@ export default function ProductsPanel () {
                         />
                         <RadioButton 
                             changed={handleChangeRadio}
-                            id="all"
+                            id={initialAmount}
                             isSelected={amount === initialAmount}
-                            label="All"
-                            value="all"
+                            label={initialAmount}
+                            value={initialAmount}
                         />
                     </div>
                 </div>

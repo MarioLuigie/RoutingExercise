@@ -18,13 +18,13 @@ export default function Product ({
         switch (type) {
             case "handbags": 
                 setImage(<FontAwesomeIcon icon={faBagShopping} />)
-                break;
+            break;
             case "shoes":
                 setImage(<FontAwesomeIcon icon={faShoePrints} />)
-                break;
+            break;
             case "pants":
                 setImage(<FontAwesomeIcon icon={faTableColumns} />)
-                break;
+            break;
             default:
                 setImage(<FontAwesomeIcon icon={faBan} />)
         }
